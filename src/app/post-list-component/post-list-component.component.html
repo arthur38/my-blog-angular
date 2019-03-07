@@ -1,3 +1,5 @@
 <li class="list-group-item" *ngFor="let post of postsArray">
-  <app-post-list-item-component></app-post-list-item-component>
+  <app-post-list-item-component [postTitle]="post.title" 
+  [postContent]="post.content" [postLoveIts]="post.loveIts"
+  [postCreated_at]="post.created_at"></app-post-list-item-component>
 </li>
