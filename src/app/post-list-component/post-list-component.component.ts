@@ -9,5 +9,7 @@ import { Post } from '../app.component';
 })
 export class PostListComponentComponent implements OnInit {
   @Input() postsArray: Post[];
-
+  
+  ngOnInit() {
+  }
 }
