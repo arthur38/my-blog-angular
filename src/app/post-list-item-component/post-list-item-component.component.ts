@@ -12,9 +12,22 @@ export class PostListItemComponentComponent implements OnInit {
   @Input() postLoveIts: number;
   @Input() postCreated_at: Date;
 
-  constructor() { }
-
   ngOnInit() {
   }
 
+  onLoveIt(){
+    let numberOfLoveIts = this.postLoveIts;
+    numberOfLoveIts++;
+    this.postLoveIts = numberOfLoveIts;
+  }
+
+  onDontLoveIt(){
+    let numberOfLoveIts = this.postLoveIts;
+    numberOfLoveIts--;
+    this.postLoveIts = numberOfLoveIts;
+  }
+
+  getLoveIts(){
+    return this.postLoveIts
+  }
 }
