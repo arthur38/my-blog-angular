@@ -7,10 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostListItemComponentComponent implements OnInit {
 
-  @Input() postTitle: String;
-  @Input() postContent: String;
+  @Input() postTitle: string;
+  @Input() postContent: string;
   @Input() postLoveIts: number;
-  @Input() postCreated_at: Date;
+  @Input() postcreatedAt: Date;
 
   ngOnInit() {
   }
@@ -21,13 +21,13 @@ export class PostListItemComponentComponent implements OnInit {
     this.postLoveIts = numberOfLoveIts;
   }
 
-  onDontLoveIt(){
+  onDontLoveIt() {
     let numberOfLoveIts = this.postLoveIts;
     numberOfLoveIts--;
     this.postLoveIts = numberOfLoveIts;
   }
 
-  getLoveIts(){
-    return this.postLoveIts
+  getLoveIts() {
+    return this.postLoveIts;
   }
 }

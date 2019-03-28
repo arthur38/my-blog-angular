@@ -1,6 +1,13 @@
-<li class="list-group-item" style="padding: 0; margin-bottom: 14px;"
-*ngFor="let post of postsArray">
-  <app-post-list-item-component [postTitle]="post.title"
-  [postContent]="post.content" [postLoveIts]="post.loveIts"
-  [postCreated_at]="post.created_at"></app-post-list-item-component>
-</li>
+<div class="row">
+  <div class="col-sm-12">
+    <h1>Posts</h1>
+    <ul class="list-group">
+      <li class="list-group-item" style="padding: 0; margin-bottom: 14px;"
+      *ngFor="let post of posts">
+        <app-post-list-item-component [postTitle]="post.title"
+        [postContent]="post.content" [postLoveIts]="post.loveIts"
+        [postcreatedAt]="post.createdAt"></app-post-list-item-component>
+      </li>
+    </ul>
+  </div>
+</div>
