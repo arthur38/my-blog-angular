@@ -21,16 +21,12 @@ export class PostListItemComponentComponent implements OnInit {
   }
 
   onAddLoveIt(post: Post) {
-    let numberOfLoveIts = this.postLoveIts;
-    numberOfLoveIts++;
-    this.postLoveIts = numberOfLoveIts;
+    this.postLoveIts++;
     this.postService.addLoveIts(post, this.postLoveIts);
   }
 
   onRemoveLoveIt(post: Post) {
-    let numberOfLoveIts = this.postLoveIts;
-    numberOfLoveIts--;
-    this.postLoveIts = numberOfLoveIts;
+    this.postLoveIts--;
     this.postService.removeLoveIts(post, this.postLoveIts);
 
   }

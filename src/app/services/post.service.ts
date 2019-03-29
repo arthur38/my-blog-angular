@@ -48,18 +48,29 @@ export class PostService {
   }
 
   addLoveIts(post: Post, numberOfLoveIts: number) {
-    /* const postToUpdate = this.posts.find(
+    const postindexToUpdate = this.posts.findIndex(
       (postEl) => {
         if (postEl === post) {
           return true;
         }
       }
     );
-    po */
+    post.loveIts++;
+    this.posts.splice(postindexToUpdate, 1, post);
+    this.emitPostSubject();
   }
 
   removeLoveIts(post: Post, numberOfLoveIts: number) {
-
+    const postindexToUpdate = this.posts.findIndex(
+      (postEl) => {
+        if (postEl === post) {
+          return true;
+        }
+      }
+    );
+    post.loveIts--;
+    this.posts.splice(postindexToUpdate, 1, post);
+    this.emitPostSubject();
   }
 
 }
